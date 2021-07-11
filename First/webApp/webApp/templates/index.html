@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+$("#timePicker").keyup(function() {
+  this.value = this.value.replace(/ /g, ":");
+});
+	$("#submit").click(function(){
+		var user = $('#timePicker').val();
+		console.log(typeof(user));
+	});
+});
+</script>
+</head>
+<body>
+<form action="/getData" method= "post">
+<input type="text"  id="timePicker" name="time">
+<input type="submit" value="Submit" id="submit">
+</form>
+</body>
+</html>
